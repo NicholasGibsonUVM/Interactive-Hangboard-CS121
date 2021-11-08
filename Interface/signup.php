@@ -9,16 +9,24 @@ session_start();
 		//something was posted
 		$username = $_POST['username'];
 		$password = $_POST['password'];
+		$first = $_POST['first'];
+		$last = $_POST['last'];
+		$email = $_POST['email'];
+		$yearsClimbing = $_POST['yearsClimbing'];
+		$age = $_POST['age'];
+		$weight = $_POST['weight'];
+		$Vgrade = $_POST['Vgrade'];
+		$leadGrade = $_POST['leadGrade'];
+
 
 		if(!empty($username) && !empty($password) && !is_numeric($username))
 		{
 			//save to database
-			$query2 = "INSERT INTO users (username, pass) VALUES ('$username','$password')";
+			$query2 = "INSERT INTO `users` (`username`, `pass`, `email`, `first`, `last`, `age`, `weight`, `years_climbing`, `Vgrade`, `leadGrade`) VALUES ('$username','$password','$email','$first','$last','$age','$weight','$yearsClimbing','$Vgrade','$leadGrade')";
 
 			mysqli_query($con, $query2);
 			
-			echo $query2;
-			// header("Location: login.php");
+			header("Location: login.php");
 			die;
 		}else
 		{
@@ -70,8 +78,16 @@ session_start();
 		<form method="post">
 			<div style="font-size: 20px;margin: 10px;color: white;">Signup</div>
 
-			<input id="text" type="text" name="username"><br><br>
-			<input id="text" type="password" name="password"><br><br>
+			<input id="text" type="text" name="first" placeholder="First Name"><br><br>
+			<input id="text" type="text" name="last" placeholder="Last Name"><br><br>
+			<input id="text" type="text" name="username" placeholder="Username"><br><br>
+			<input id="text" type="email" name="email" placeholder="Email"><br><br>
+			<input id="text" type="password" name="password" placeholder="Password"><br><br>
+			<input id="text" type="text" name="age" placeholder="Age"><br><br>
+			<input id="text" type="text" name="yearsClimbing" placeholder="Climbing experience (Years)"><br><br>
+			<input id="text" type="text" name="weight" placeholder="Weight (lbs)"><br><br>
+			<input id="text" type="text" name="Vgrade" placeholder="V-Grade"><br><br>
+			<input id="text" type="text" name="leadGrade" placeholder="Lead Grade"><br><br>
 
 			<input id="button" type="submit" value="Signup"><br><br>
 
