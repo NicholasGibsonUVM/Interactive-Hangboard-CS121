@@ -1,4 +1,6 @@
 <?php 
+include 'top.php';
+
 
 session_start();
 
@@ -50,50 +52,24 @@ session_start();
 <html>
 <head>
 	<title>Login</title>
+	<link rel="stylesheet" 
+          href="../style/forms_style.css?version=<?php print time();?>"
+          type="text/css">
 </head>
 <body>
-
-	<style type="text/css">
-	
-	#text{
-
-		height: 25px;
-		border-radius: 5px;
-		padding: 4px;
-		border: solid thin #aaa;
-		width: 100%;
-	}
-
-	#button{
-
-		padding: 10px;
-		width: 100px;
-		color: white;
-		background-color: lightblue;
-		border: none;
-	}
-
-	#box{
-
-		background-color: grey;
-		margin: auto;
-		width: 300px;
-		padding: 20px;
-	}
-
-	</style>
-
+	<a href='login.php'><img src="../images/logo.png" class='navLogo' alt='logo'></a>
 	<div id="box">
 		
 		<form method="post">
-			<div style="font-size: 20px;margin: 10px;color: white;">Login</div>
-
+			<div style="font-size: 20px;margin: 10px;color: lightgrey; text-align:center">Login</div>
+			<label for="username" id="label">Username</label>
 			<input id="text" type="text" name="username"><br><br>
+			<label for="password" id="label">Password</label>
 			<input id="text" type="password" name="password"><br><br>
 
 			<input id="button" type="submit" value="Login"><br><br>
 
-			<a href="signup.php">Click to Signup</a><br><br>
+			<a href="signup.php">New User? Register</a><br><br>
 		</form>
 	</div>
 </body>

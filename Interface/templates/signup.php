@@ -26,7 +26,7 @@ session_start();
 
 			mysqli_query($con, $query2);
 			
-			header("Location: login.php");
+			echo 'Account added, go to login';
 			die;
 		}else
 		{
@@ -40,58 +40,42 @@ session_start();
 <html>
 <head>
 	<title>Signup</title>
+	<link rel="stylesheet" 
+          href="../style/forms_style.css?version=<?php print time();?>"
+          type="text/css">
 </head>
 <body>
-
-	<style type="text/css">
-	
-	#text{
-
-		height: 25px;
-		border-radius: 5px;
-		padding: 4px;
-		border: solid thin #aaa;
-		width: 100%;
-	}
-
-	#button{
-
-		padding: 10px;
-		width: 100px;
-		color: white;
-		background-color: lightblue;
-		border: none;
-	}
-
-	#box{
-
-		background-color: grey;
-		margin: auto;
-		width: 300px;
-		padding: 20px;
-	}
-
-	</style>
-
+	<a href='login.php'><img src="../images/logo.png" class='navLogo' alt='logo'></a>
 	<div id="box">
 		
 		<form method="post">
-			<div style="font-size: 20px;margin: 10px;color: white;">Signup</div>
+			<div style="font-size: 20px;margin: 10px;color: lightgrey;">Signup</div>
 
-			<input id="text" type="text" name="first" placeholder="First Name"><br><br>
-			<input id="text" type="text" name="last" placeholder="Last Name"><br><br>
-			<input id="text" type="text" name="username" placeholder="Username"><br><br>
-			<input id="text" type="email" name="email" placeholder="Email"><br><br>
-			<input id="text" type="password" name="password" placeholder="Password"><br><br>
-			<input id="text" type="text" name="age" placeholder="Age"><br><br>
-			<input id="text" type="text" name="yearsClimbing" placeholder="Climbing experience (Years)"><br><br>
-			<input id="text" type="text" name="weight" placeholder="Weight (lbs)"><br><br>
-			<input id="text" type="text" name="Vgrade" placeholder="V-Grade"><br><br>
-			<input id="text" type="text" name="leadGrade" placeholder="Lead Grade"><br><br>
+			<label for="first" id="label">First Name</label>
+			<input id="text" type="text" name="first"><br><br>
+			<label for="last" id="label">Last Name</label>
+			<input id="text" type="text" name="last"><br><br>
+			<label for="username" id="label">Username</label>
+			<input id="text" type="text" name="username"><br><br>
+			<label for="email" id="label">Email</label>
+			<input id="text" type="email" name="email"><br><br>
+			<label for="password" id="label">Password</label>
+			<input id="text" type="password" name="password"><br><br>
+			<label for="age" id="label">Age</label>
+			<input id="text" type="text" name="age"><br><br>
+			<label for="weight" id="label">Weight</label>
+			<input id="text" type="text" name="weight"><br><br>
+			<label for="yearsClimbing" id="label">Climbing Experience (Years)</label>
+			<input id="text" type="text" name="yearsClimbing"><br><br>
+			<label for="Vgrade" id="label">V-Grade</label>
+			<input id="text" type="text" name="Vgrade"><br><br>
+			<label for="leadGrade" id="label">Lead Grade</label>
+			<input id="text" type="text" name="leadGrade"><br><br>
 
 			<input id="button" type="submit" value="Signup"><br><br>
 
 			<a href="login.php">Click to Login</a><br><br>
+
 		</form>
 	</div>
 </body>
