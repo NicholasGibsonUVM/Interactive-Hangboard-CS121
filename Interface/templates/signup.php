@@ -49,7 +49,7 @@ session_start();
 	<div id="box">
 		
 		<form method="post">
-			<div style="font-size: 20px;margin: 10px;color: white;">Signup</div>
+			<div style="font-size: 20px;margin: 10px;color: lightgrey;">Signup</div>
 
 			<label for="first" id="label">First Name</label>
 			<input id="text" type="text" name="first"><br><br>

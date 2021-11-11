@@ -61,7 +61,7 @@ session_start();
 	<div id="box">
 		
 		<form method="post">
-			<div style="font-size: 20px;margin: 10px;color: white; text-align:center">Login</div>
+			<div style="font-size: 20px;margin: 10px;color: lightgrey; text-align:center">Login</div>
 			<label for="username" id="label">Username</label>
 			<input id="text" type="text" name="username"><br><br>
 			<label for="password" id="label">Password</label>
