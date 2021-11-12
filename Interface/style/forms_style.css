@@ -10,6 +10,7 @@
 
 #text:focus{
     outline: none;
+    border-bottom: 4px;
 }
 
 #label{

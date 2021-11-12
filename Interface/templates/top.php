@@ -9,10 +9,7 @@
         <title></title>
 
         <link rel="stylesheet" 
-              href="css/forms_style.css?version=<?php print time();?>"
-              type="text/css">
-        <link rel="stylesheet" 
-              href="css/custom.css?version=<?php print time();?>"
+              href="../style/style.css?version=<?php print time();?>"
               type="text/css">
         <link rel="stylesheet" media="(max-width:800px)"
               href="css/tablet.css?version=<?php print time();?>"
