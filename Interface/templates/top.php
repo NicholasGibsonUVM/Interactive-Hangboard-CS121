@@ -19,7 +19,7 @@
               type="text/css">
     </head>
     <?php
-    include "lib/constants.php";
+    include "../lib/constants.php";
     print'<body class="' . PATH_PARTS['filename'] . '">' . PHP_EOL;
     print'<!-- ***** START OF BODY ***** -->';
     print PHP_EOL;
