@@ -7,8 +7,8 @@ define('DB', 'EWEST3_labs');
 // $pdo = new PDO($dsn, $username, $password);
 // // $mysqli = new mysqli($dsn, $username, $password);
 
-if(!$con = mysqli_connect(server, username, password, DB))
+/* if(!$con = mysqli_connect(server, username, password, DB))
 {
 	die("failed to connect!");
-}
+} */
 ?>
