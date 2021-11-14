@@ -9,20 +9,14 @@
         <title></title>
 
         <link rel="stylesheet" 
-              href="css/forms_style.css?version=<?php print time();?>"
-              type="text/css">
-        <link rel="stylesheet" 
-              href="css/custom.css?version=<?php print time();?>"
-              type="text/css">
-        <link rel="stylesheet" media="(max-width:800px)"
-              href="css/tablet.css?version=<?php print time();?>"
-              type="text/css">
-        <link rel="stylesheet" media="(max-width:600px)"
-              href="css/phone.css?version=<?php print time();?>"
+              href="../style/forms_style.css?version=<?php print time();?>"
               type="text/css">
     </head>
     <?php
     include "../lib/constants.php";
+    require_once("../lib/functions.php");
+    require_once("../lib/database.php");
+    $databaseWriter = new DataBase("root", 'w', "hangboard");
     print'<body class="' . PATH_PARTS['filename'] . '">' . PHP_EOL;
     print'<!-- ***** START OF BODY ***** -->';
     print PHP_EOL;
