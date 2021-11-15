@@ -26,6 +26,14 @@ li a {
 li a:hover {
   background-color: #111;
 }
+.activePage {
+  background-color: #04AA6D;
+}
+
+body{
+  margin-top:30px;
+  padding:20px;
+}
 
 .navLogo{
   border-radius: 20%;

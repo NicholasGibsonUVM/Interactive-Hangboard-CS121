@@ -1,6 +1,4 @@
 <?php 
-
-
 session_start();
 
 	include("connection.php");
@@ -34,13 +32,15 @@ session_start();
 						header("Location: profile.php");
 						die;
 					}
+					else{echo "wrong username or password! 1";}
 				}
+				else{echo "wrong username or password! 2";}
 			}
 			
-			echo "wrong username or password!";
+			echo "wrong username or password! 3";
 		}else
 		{
-			echo "wrong username or password!";
+			echo "wrong username or password! 4";
 		}
 	}
 
@@ -60,7 +60,7 @@ session_start();
 	<div id="box">
 		
 		<form method="post">
-			<div style="font-size: 20px;margin: 10px;color: lightgrey; text-align:center">Login</div>
+			<div style="font-size: 20px;margin: 10px;color: white; text-align:center">Login</div>
 			<label for="username" id="label">Username</label>
 			<input id="text" type="text" name="username"><br><br>
 			<label for="password" id="label">Password</label>
