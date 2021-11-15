@@ -8,6 +8,6 @@ CREATE TABLE tblUser (
     fldWeight float,
     fldExpeirence int,
     fldVGrade int,
-    fldSportGrade float,
+    fldSportGrade varchar(50),
     PRIMARY KEY(pmkUsername)
 );

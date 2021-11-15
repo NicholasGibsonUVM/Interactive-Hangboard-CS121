@@ -14,7 +14,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+lib/passwords.php
 lib64/
 parts/
 sdist/
@@ -128,4 +128,4 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-lib/passwords.php
+lib/passwords
