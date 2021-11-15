@@ -12,10 +12,10 @@
         </li>
         <li>
             <a class ="<?php
-            if($path_parts['filename'] == "user_info") {
+            if($path_parts['filename'] == "userInfo") {
                 print 'activePage';
             }
-            ?>" href = "user_info.php">My Info</a>
+            ?>" href = "userInfo.php">My Info</a>
         </li>
         <li style='float:right'>
             <a class ="<?php

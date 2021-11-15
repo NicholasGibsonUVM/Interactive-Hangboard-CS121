@@ -10,11 +10,7 @@
 
 #text:focus{
     outline: none;
-    border-bottom: 4px;
-}
-
-#label{
-    align: left;
+    border-bottom: 4px solid darkgreen;
 }
 #button{
     padding: 10px;
