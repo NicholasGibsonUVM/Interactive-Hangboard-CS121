@@ -1,13 +1,15 @@
-<?php 
+<?php
+include 'top.php';
 session_start();
-include("connection.php");
-include("functions.php");
-include "top.php";
 $user_data = check_login($con);
 ?>
 
-<body>
-	<br>
-	Hello, <?php echo $user_data['username']; ?>
+
+<a href="logout.php">Logout</a>
+<h1>This is the profile page</h1>
+
+<br>
+Hello, <?php echo $user_data['username']; ?>
 </body>
+
 </html>
