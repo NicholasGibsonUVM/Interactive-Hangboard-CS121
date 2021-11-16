@@ -17,6 +17,13 @@
             }
             ?>" href = "userInfo.php">My Info</a>
         </li>
+        <li>
+            <a class ="<?php
+            if($path_parts['filename'] == "about") {
+                print 'activePage';
+            }
+            ?>" href = "about.php">About</a>
+        </li>
         <li style='float:right'>
             <a class ="<?php
             if($path_parts['filename'] == "logout") {
