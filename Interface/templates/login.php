@@ -1,8 +1,5 @@
 <?php
 include 'top.php';
-
-
-session_start();
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 	//something was posted
 	$user_name = getData('username');
@@ -16,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		$result = $databaseWriter->select($query, $value);
 
 		if ($result && $result['fldPassword'] === $password) {
-			$_SESSION['id'] = $user_data['id'];
+			$_SESSION['id'] = $user_name;
 			header("Location: profile.php");
 			die;
 		}

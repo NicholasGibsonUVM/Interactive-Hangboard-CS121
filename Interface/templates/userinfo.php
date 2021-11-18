@@ -1,9 +1,6 @@
 <?php 
-session_start();
-include("connection.php");
-include("functions.php");
 include "top.php";
-$user_data = check_login($con);
+$user_data = check_login();
 ?>
 
 <body>

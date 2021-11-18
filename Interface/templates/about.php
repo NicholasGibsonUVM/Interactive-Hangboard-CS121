@@ -1,7 +1,6 @@
 <?php
 include 'top.php';
-session_start();
-$user_data = check_login($con);
+$user_data = check_login();
 ?>
 
 <main>

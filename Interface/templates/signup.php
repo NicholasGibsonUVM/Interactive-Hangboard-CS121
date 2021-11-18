@@ -1,7 +1,5 @@
 <?php
 include 'top.php';
-
-session_start();
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 	//something was posted
 	$username = getData('username');

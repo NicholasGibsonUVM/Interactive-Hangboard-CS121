@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -13,10 +14,14 @@
               type="text/css">
     </head>
     <?php
+    if (DEVELOPMENT) {
+        ini_set('display_errors', 1);
+        error_reporting(E_ALL);
+    }
     include "../lib/constants.php";
-    require_once("../lib/functions.php");
     require_once("../lib/database.php");
     $databaseWriter = new DataBase("root", 'w', "hangboard");
+    require_once("../lib/functions.php");
     print'<body class="' . PATH_PARTS['filename'] . '">' . PHP_EOL;
     print'<!-- ***** START OF BODY ***** -->';
     print PHP_EOL;
