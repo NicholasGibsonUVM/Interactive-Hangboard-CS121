@@ -1,25 +1,24 @@
 <?php
-// Change this function to work with apache2
-function check_login($con)
+function check_login()
 {
 
 	if(isset($_SESSION['id']))
 	{
 
-		$id = $_SESSION['id'];
-		$query = "select * from users where id = '$id' limit 1";
+		$id = array($_SESSION['id']);
+		$query = "select `pmkUsername` from tblUsers where `pmkUsername` = ? limit 1";
 
-		$result = mysqli_query($con,$query);
-		if($result && mysqli_num_rows($result) > 0)
+		$result = $databaseWriter->select($query, $id);
+		if($result && count($result, COUNT_RECURSIVE) == 2) 
 		{
-
-			$user_data = mysqli_fetch_assoc($result);
+			$query = "select * from tblUsers where `pmkUsername` = ?";
+			$user_data = $databaseWriter->select($query, $id);
 			return $user_data;
 		}
 	}
 
 	//redirect to login
-	header("Location: login.php");
+	header("Location: login.php", true, 303);
 	die;
 }
 
