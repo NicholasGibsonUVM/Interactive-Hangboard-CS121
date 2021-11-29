@@ -1,6 +1,5 @@
 <?php
 include 'top.php';
-$user_data = check_login();
 ?>
 
 <main>

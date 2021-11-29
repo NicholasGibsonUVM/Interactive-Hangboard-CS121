@@ -8,11 +8,12 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 	if (!empty($user_name) && !empty($password) && !is_numeric($user_name)) {
 
 		//read from database
-		$query = "SELECT `fldPassword` FROM tblUser where pmkUsername = '?' limit 1";
+		$query = "SELECT `fldPassword` FROM tblUser WHERE pmkUsername = ? limit 1";
 		$value = array($user_name);
+		echo $databaseWriter->displayQuery($query, $value);
 		$result = $databaseWriter->select($query, $value);
 
-		if ($result && $result['fldPassword'] === $password) {
+		if ($result && $result[0]['fldPassword'] === $password) {
 			$_SESSION['id'] = $user_name;
 			header("Location: profile.php");
 			die;
@@ -20,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 
 		echo "wrong username or password!";
 	} else {
-		echo "wrong username or password!";
+		echo "invalid username or password";
 	}
 }
 

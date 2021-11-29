@@ -4,22 +4,23 @@ function check_login()
 
 	if(isset($_SESSION['id']))
 	{
+		$databaseWriter = new DataBase("root", 'w', "hangboard");
 
 		$id = array($_SESSION['id']);
-		$query = "select `pmkUsername` from tblUsers where `pmkUsername` = ? limit 1";
-
+		$query = "SELECT `pmkUsername` FROM tblUser WHERE `pmkUsername` = ? limit 1";
+		print $databaseWriter->displayQuery($query, $id);
 		$result = $databaseWriter->select($query, $id);
-		if($result && count($result, COUNT_RECURSIVE) == 2) 
+		if($result) 
 		{
-			$query = "select * from tblUsers where `pmkUsername` = ?";
+			$query = "SELECT * FROM tblUser WHERE `pmkUsername` = ?";
 			$user_data = $databaseWriter->select($query, $id);
 			return $user_data;
 		}
+	} else {
+		//redirect to login
+		header("Location: login.php", true, 303);
+		die;
 	}
-
-	//redirect to login
-	header("Location: login.php", true, 303);
-	die;
 }
 
 //Get trim and sanatize data

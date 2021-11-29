@@ -5,31 +5,33 @@
         </li>
         <li>
             <a class ="<?php
-            if($path_parts['filename'] == "profile") {
+            if(PATH_PARTS['filename'] == "profile") {
                 print 'activePage';
             }
             ?>" href = "profile.php">Home</a>
         </li>
         <li>
             <a class ="<?php
-            if($path_parts['filename'] == "userinfo") {
+            if(PATH_PARTS['filename'] == "userinfo") {
                 print 'activePage';
             }
             ?>" href = "userinfo.php">My Info</a>
         </li>
         <li>
             <a class ="<?php
-            if($path_parts['filename'] == "about") {
+            if(PATH_PARTS['filename'] == "about") {
                 print 'activePage';
             }
             ?>" href = "about.php">About</a>
         </li>
         <li style='float:right'>
-            <a class ="<?php
-            if($path_parts['filename'] == "logout") {
-                print 'activePage';
-            }
-            ?>" href = "logout.php">Log Out</a>
+            <?php
+            if (isset($_SESSION["id"])) {
+            print '<a href="logout.php">Log Out</a>';
+        } else {
+            print '<a href="login.php"> Log In</a>';
+        }
+            ?>
         </li>
     </ul>
 </nav>

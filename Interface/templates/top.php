@@ -14,11 +14,11 @@
               type="text/css">
     </head>
     <?php
-    if (DEVELOPMENT) {
+    include "../lib/constants.php";
+    if (DEVELOPMENT || DEBUG) {
         ini_set('display_errors', 1);
         error_reporting(E_ALL);
     }
-    include "../lib/constants.php";
     require_once("../lib/database.php");
     $databaseWriter = new DataBase("root", 'w', "hangboard");
     require_once("../lib/functions.php");
