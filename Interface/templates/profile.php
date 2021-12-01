@@ -1,6 +1,6 @@
 <?php
 include 'top.php';
-$user_data = check_login();
+$user_data = check_login($dbUsername, $dbName);
 ?>
 
 

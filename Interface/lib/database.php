@@ -3,7 +3,7 @@ class DataBase
 {
     public $pdo = '';
 
-    const DB_DEBUG = FALSE;
+    const DB_DEBUG = TRUE;
     public function __construct($dataBaseUser, $whichDataBasePassword, $dataBaseName)
     {
         $this->pdo = null;
@@ -20,7 +20,7 @@ class DataBase
         }
 
         $query = NULL;
-        $dsn = 'mysql:host=localhost;dbname=';
+        $dsn = 'mysql:host=' . $dbHost . ';dbname=';
 
         if (self::DB_DEBUG) {
             echo "<p>Try connecting with phpMyAdmin with these credentials.</p>";

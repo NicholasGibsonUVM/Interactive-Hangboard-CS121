@@ -1,10 +1,9 @@
 <?php
-function check_login()
+function check_login($dbUsername, $dbName)
 {
-
 	if(isset($_SESSION['id']))
 	{
-		$databaseWriter = new DataBase("root", 'w', "hangboard");
+    	$databaseWriter = new DataBase($dbUsername, 'w', $dbName);
 
 		$id = array($_SESSION['id']);
 		$query = "SELECT `pmkUsername` FROM tblUser WHERE `pmkUsername` = ? limit 1";

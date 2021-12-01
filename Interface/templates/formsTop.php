@@ -10,8 +10,8 @@
         <title></title>
 
         <link rel="stylesheet" 
-              href="../style/style.css?version=<?php print time();?>"
-              type="text/css">
+              href="../style/forms_style.css?version=<?php print time();?>"
+                type="text/css">
     </head>
     <?php
     include "../lib/constants.php";
