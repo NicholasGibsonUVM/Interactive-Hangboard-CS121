@@ -13,17 +13,7 @@ Hello, <?php echo $user_data[0]['pmkUsername']; ?>
 <div class="tab">
 		<?php 
 		$sqlSessions = 'SELECT pmkSessionId FROM tblSession WHERE fpkUsername = "' . $user_data['username'] . '"';
-		print $sqlSessions;
-		if(mysqli_query($con, $sqlSessions)){
-			print('failed to connect');
-		}
-		$sessionList = mysqli_fetch_all($result);
-		
-		// $statement1 = $pdo->prepare($sqlSessions);
-		// $statement1->execute();
-
-		// $sessionList = $statement1->fetchAll();
-		// print $sessionList;
+		$sessionList = $databaseWriter->select($sqlSessions);
 		
 		foreach($sessionList as $sessionId){
 			
@@ -35,9 +25,7 @@ Hello, <?php echo $user_data[0]['pmkUsername']; ?>
 			print '<table id="sessionData"><tr><th>Rep</th><th>Hold</th><th>Length</th></tr>';
 			
 			$sqlSession = 'SELECT pmkHangId, fldHold, fldTime FROM tblHang WHERE fpkSessionId = ' . $sessionId;
-			print $sqlSession;
-			$result = mysqli_query($con, $sqlSession);
-			$oneSession = mysqli_fetch_all($result);
+			$oneSession = $databaseWriter->select($sqlSession);
 	
 			foreach($oneSession as $hang){
 				print '<tr>';
