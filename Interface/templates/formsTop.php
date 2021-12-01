@@ -26,8 +26,4 @@
     print'<body class="' . PATH_PARTS['filename'] . '">' . PHP_EOL;
     print'<!-- ***** START OF BODY ***** -->';
     print PHP_EOL;
-    include 'header.php';
-    print PHP_EOL;
-    include 'nav.php';
-    print PHP_EOL;
     ?>

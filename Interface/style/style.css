@@ -34,6 +34,7 @@ li a:hover {
 body{
   margin-top:30px;
   padding:20px;
+  font-family: 'helvetica';
 }
 
 .navLogo{
@@ -75,4 +76,52 @@ body{
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: center space-around;
+  margin-top: 4em;
+  margin-bottom: 4em;
+  border-radius:1em;
+}
+
+div{
+  background-color: lightgrey;
+  margin: 1em;
+}  
+
+
+h3{
+  text-align: center;
+/*   padding-top: 1em; */
+  font-size: 30px;
+}
+
+p{
+  text-align: center;
+  margin: 2em;
+  line-height: 1.8;
+}
+
+.imgAbout{
+  border-radius: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-top: 1em;
+}
+
+.about{
+  margin-top: 3em;
+  border-radius: 1em;
+  padding: 1em;
 }
