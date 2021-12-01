@@ -1,5 +1,5 @@
 <?php
-include 'top.php';
+include 'formsTop.php';
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
 	//something was posted
 	$user_name = getData('username');
