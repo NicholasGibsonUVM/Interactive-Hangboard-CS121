@@ -3,7 +3,6 @@ include 'top.php';
 $user_data = check_login($dbUsername, $dbName);
 ?>
 
-
 <h1>This is the profile page</h1>
 
 <br>
@@ -47,5 +46,4 @@ include "../static/tableTabs.js";
 print PHP_EOL . "</script>";
 ?>
 </body>
-
 </html>

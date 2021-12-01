@@ -47,6 +47,9 @@ body{
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
+  margin-bottom: 0em;
+  margin-left: 15em;
+  margin-right: 15em;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -58,6 +61,7 @@ body{
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
+  overflow-x:auto;
 }
 
 /* Change background color of buttons on hover */
@@ -76,6 +80,10 @@ body{
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
+  margin-top: 0em;
+  margin-left: 15em;
+  margin-right: 15em;
+
 }
 
 .flex-container {
@@ -124,4 +132,31 @@ p{
   margin-top: 3em;
   border-radius: 1em;
   padding: 1em;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+th{
+  width: 25%;
+  background-color: #CCCCCCCC;
+}
+td{
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+button.session{
+  background-color: lightblue;
+  padding: 10px 24px;
+  font-size: 16px;
+  border: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+button.session:hover{
+  background-color: lightgreen;
 }

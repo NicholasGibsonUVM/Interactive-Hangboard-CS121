@@ -1,6 +1,7 @@
 <?php
 include "top.php";
-$user_data = check_login();
+include '../lib/passwords.php';
+$user_data = check_login($dbUsername, $dbName);
 ?>
 
 <body>
