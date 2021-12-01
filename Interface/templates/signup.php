@@ -22,7 +22,7 @@ session_start();
 		if(!empty($username) && !empty($password) && !is_numeric($username))
 		{
 			//save to database
-			$query2 = "INSERT INTO `users` (`username`, `pass`, `email`, `first`, `last`, `age`, `weight`, `years_climbing`, `Vgrade`, `leadGrade`) VALUES ('$username','$password','$email','$first','$last','$age','$weight','$yearsClimbing','$Vgrade','$leadGrade')";
+			$query2 = "INSERT INTO `tblUser` (`username`, `pass`, `email`, `first`, `last`, `age`, `weight`, `years_climbing`, `Vgrade`, `leadGrade`) VALUES ('$username','$password','$email','$first','$last','$age','$weight','$yearsClimbing','$Vgrade','$leadGrade')";
 
 			mysqli_query($con, $query2);
 			

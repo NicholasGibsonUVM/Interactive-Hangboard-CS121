@@ -5,7 +5,7 @@ $user_data = check_login($con);
 ?>
 
 <main>
-    <div class="flex-container">
+    <div>
         <p>
             About Ethan
         </p>

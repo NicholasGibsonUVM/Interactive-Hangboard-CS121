@@ -17,6 +17,7 @@
         <link rel="stylesheet" media="(max-width:600px)"
               href="css/phone.css?version=<?php print time();?>"
               type="text/css">
+        <script type="text/javascript" src="../static/tableTabs.js"></script>
     </head>
     <?php
     include "../lib/constants.php";
