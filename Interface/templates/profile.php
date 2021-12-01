@@ -19,7 +19,7 @@ Hello, <?php echo $user_data[0]['pmkUsername']; ?>
 		}
 		$sessionList = mysqli_fetch_all($result);
 		
-// $statement1 = $pdo->prepare($sqlSessions);
+		// $statement1 = $pdo->prepare($sqlSessions);
 		// $statement1->execute();
 
 		// $sessionList = $statement1->fetchAll();
