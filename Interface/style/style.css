@@ -34,6 +34,8 @@ li a:hover {
 body{
   margin-top:30px;
   padding:20px;
+  margin-left: 0px;
+  padding-left: 0px;
   font-family: 'helvetica';
 }
 
