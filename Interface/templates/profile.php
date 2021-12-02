@@ -24,6 +24,7 @@ Hello, <?php echo $user_data[0]['pmkUsername']; ?>
 		print '<button class="tablinks" onclick="openSession(event, \'Session' . $sessionId['pmkSessionId'] . '\')"> Session ' . $counter . '</button>' . PHP_EOL;
 		$counter++;
 	}
+	print '</div><div>';
 
 	$counter = 1;
 	foreach ($sessionList as $sessionId) {
