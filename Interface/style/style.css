@@ -49,9 +49,7 @@ body{
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
-  margin-bottom: 0em;
-  margin-left: 15em;
-  margin-right: 15em;
+  
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -82,15 +80,20 @@ body{
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
-  margin-top: 0em;
-  margin-left: 15em;
-  margin-right: 15em;
-
+  
 }
 
 .flex-container {
   display: flex;
   justify-content: center;
+}
+
+section.flexbox {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  width: auto;
+  align-items: center;
 }
 
 .flexbox {
@@ -99,6 +102,11 @@ body{
   margin-top: 4em;
   margin-bottom: 4em;
   border-radius:1em;
+}
+
+.flexbox>div {
+  display: flex;
+  justify-content: left;
 }
 
 div{
@@ -139,7 +147,7 @@ p{
 tr:nth-child(even) {background-color: #f2f2f2;}
 
 th{
-  width: 25%;
+  width: 100%;
   background-color: #CCCCCCCC;
 }
 td{
@@ -161,4 +169,10 @@ button.session{
 }
 button.session:hover{
   background-color: lightgreen;
+}
+
+.chartBox{
+  align-self: center;
+  flex-shrink: 0;
+  height: fill;
 }
