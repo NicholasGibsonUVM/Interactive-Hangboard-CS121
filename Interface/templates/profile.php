@@ -11,8 +11,8 @@ Hello, <?php echo $user_data[0]['pmkUsername']; ?>
 	<button class='session' type='submit'>Start a new session</button>
 </form>
 <section class="flexbox">
-	<?php include('table.php'); ?>
 	<?php include('charts.php');?>
+	<?php include('table.php'); ?>
 </section>
 
 <?php
