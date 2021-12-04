@@ -48,8 +48,5 @@
 		print '</table>';
 		print '</div>';
 	}
-print "<script>" . PHP_EOL;
-include "../static/tableTabs.js";
-print PHP_EOL . "</script>";
 	?>
 </section>

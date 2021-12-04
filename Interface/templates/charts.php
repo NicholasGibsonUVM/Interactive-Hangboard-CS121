@@ -1,20 +1,19 @@
 
 <?php
-	$sqlSessions = 'SELECT `pmkSessionId` FROM `tblSession` WHERE `fpkUsername` = "' . $user_data[0]['pmkUsername'] . '" ORDER BY `pmkSessionId`';
-	$sessionList = $databaseWriter->select($sqlSessions);
+	print "<section class = 'chartBox'>";
+    $sqlSessions = 'SELECT `pmkSessionId` FROM `tblSession` WHERE `fpkUsername` = "' . $user_data[0]['pmkUsername'] . '" ORDER BY `pmkSessionId`';
+
+    $sessionList = $databaseWriter->select($sqlSessions);
 	if (DEBUG) {
 		print_r($sessionList);
 	}
 
 	$counter = 1;
 	foreach ($sessionList as $sessionId) {
-		$counter++;
-	}
-
-	$counter = 1;
-	foreach ($sessionList as $sessionId) {
 		$sqlSession = 'SELECT `fldTime` FROM `tblHang` WHERE `fpkSessionId` = ' . $sessionId['pmkSessionId'];
-		if (DEBUG) {
+		
+        print '<canvas id="Session' . $sessionId['pmkSessionId'] . '" class="tabcontent"></canvas>' . PHP_EOL;
+        if (DEBUG) {
 			print $databaseWriter->displayQuery($sqlSession);
 		}
 		$oneSession = $databaseWriter->select($sqlSession);
@@ -28,26 +27,15 @@
 		}
 		$counter++;
 	}
-	print_r($hangs);
-    print_r($reps);
-    print "<script>" . PHP_EOL;
-include "../static/tableTabs.js";
-print PHP_EOL . "</script>";
-	?>
+	// print_r($hangs);
+    // print_r($reps);
+    print '</section>';
 	?>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-<section class = "chartBox">
-    //to try and display chart by clicking on session buttons
-    <!-- <?php 
-    foreach ($sessionList as $sessionId) {
-		print '<canvas id="myChart" onclick="openSession(event, \'Session' . $sessionId['pmkSessionId'] . '></canvas>' . PHP_EOL;
-		$counter++;
-	}?> -->
-
-//displaying chart as it is now
+<!-- <section class = "chartBox">
 <canvas id="myChart"></canvas>
-</section>
+</section> -->
 <script>
 //setup block
 const timeY = <?php echo json_encode($hangs); ?> // goes in data
