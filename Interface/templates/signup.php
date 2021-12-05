@@ -23,7 +23,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 		$values = array($username, $first, $last, $email, $password, $age, $weight, $yearsClimbing, $Vgrade, $leadGrade);
 
 		if ($databaseWriter->insert($query2, $values)) {
-			print '<p>Profile Added Please Login</p>';
+			$_SESSION['id'] = $username;
+			header("Location: profile.php", true, 303);
+			exit();
 		} else {
 			print '<p>Please enter some valid information!</p>';
 			if (DEBUG) {
