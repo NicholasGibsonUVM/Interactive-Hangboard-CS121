@@ -7,8 +7,8 @@
         <meta name="author" content="Nicholas Gibson | Ethan West">
         <meta name="description"
             content="">
-        <title></title>
-
+        <title>Interactive Hangboard</title>
+        <link rel="shortcut icon" type="image/jpg" href="../images/logo.png"/>
         <link rel="stylesheet" 
               href="../style/style.css?version=<?php print time();?>"
               type="text/css">

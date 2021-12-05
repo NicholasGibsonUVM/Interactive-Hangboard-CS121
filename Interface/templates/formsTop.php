@@ -7,6 +7,8 @@
         <meta name="author" content="Nicholas Gibson | Ethan West">
         <meta name="description"
             content="">
+        <link rel="shortcut icon" type="image/jpg" href="../images/logo.jpg"/>
+
         <title></title>
 
         <link rel="stylesheet" 

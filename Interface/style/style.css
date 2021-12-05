@@ -22,13 +22,24 @@ li a {
   text-decoration: none;
 }
 
+#logo{
+  padding: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.navLogo{
+  object-fit: fill;
+  width: 50px;
+}
+
 /* Change the link color to #111 (black) on hover */
 li a:hover {
   background-color: #111;
   transition: 0.3s;
 }
 .activePage {
-  background-color: #04AA6D;
+  background-color: lightgreen;
+  color: black;
 }
 
 body{
@@ -38,17 +49,11 @@ body{
   padding-left: 0px;
   font-family: 'helvetica';
 }
-
-.navLogo{
-  border-radius: 20%;
-  width: 30px;
-}
-
 /* Style the tab */
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  background-color: lightgreen;
   flex-grow: 1;
   
 }
@@ -95,6 +100,8 @@ section.flexbox {
   height: 400px;
   width: auto;
   align-items: center;
+  background-color: white;
+  margin-top: auto;
 }
 
 div.flexbox{
@@ -113,7 +120,11 @@ div.flexbox{
   margin-bottom: 4em;
   border-radius:1em;
 }
-
+section{
+  background-color: lightgrey;
+  margin: 1em;
+  border-radius: 1em;
+  }
 
 div{
   background-color: lightgrey;
@@ -188,6 +199,8 @@ button.session:hover{
 
 canvas {
   width: 600px;
+  background-color: lightgrey;
+  border-radius: 1em;
 }
 
 p.userinfo{
@@ -208,7 +221,7 @@ h2{
   padding-top: 1em;
 }
 section.userinfo{
-  background-color: #f2f2f2;
+  background-color: lightgreen;
   margin: 5em;
   padding-top: 45px;
   padding-bottom: 45px;

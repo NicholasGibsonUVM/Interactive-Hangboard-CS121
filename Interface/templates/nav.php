@@ -1,7 +1,7 @@
 <nav>
     <ul>
         <li>
-            <a href='index.php'><img src="../images/logo.png" class='navLogo' alt='logo'></a>
+            <a id='logo' href='index.php'><img src="../images/logo.png" class='navLogo' alt='logo'></a>
         </li>
         <li>
             <a class ="<?php
@@ -9,13 +9,6 @@
                 print 'activePage';
             }
             ?>" href = "profile.php">Home</a>
-        </li>
-        <li>
-            <a class ="<?php
-            if(PATH_PARTS['filename'] == "userinfo") {
-                print 'activePage';
-            }
-            ?>" href = "userinfo.php">My Info</a>
         </li>
         <li>
             <a class ="<?php
