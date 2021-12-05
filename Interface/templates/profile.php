@@ -3,10 +3,17 @@ include 'top.php';
 $user_data = check_login($dbUsername, $dbName);
 ?>
 
-<h1>This is the profile page</h1>
+<h2>Welcome back <?php echo $user_data[0]['pmkUsername']; ?></h2>
 
-<br>
-Hello, <?php echo $user_data[0]['pmkUsername']; ?>
+<section class='userinfo'>
+<?php
+print '<h3>' . $user_data[0]['fldFirstName'] . ' ' . $user_data[0]['fldLastName'] . '</h3>';
+print '<p>' . $user_data[0]['fldAge'] . ' years old with ' . $user_data[0]['fldExperience'] . ' years of climbing experience</p>';
+print '<p>Top VGrade: V' . $user_data[0]['fldVGrade'] . '</p>';
+print '<p>Top Sport Grade: ' . $user_data[0]['fldSportGrade'] . '</p>';
+?>
+</section>
+
 <form method='post' action='newSession.php'>
 	<button class='session' type='submit'>Start a new session</button>
 </form>
