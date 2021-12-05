@@ -9,7 +9,7 @@ if ($databaseWriter->insert($sqlInsert, $data)) {
     if (DEBUG) {
         print_r($id);
     } else if ($id != null) {
-        header("Location: http://169.254.74.233/cgi-bin/app.py?sesid=" . $id[0]['pmkSessionId'], true, 303);
+        header("Location: http:" . DOMAIN . "/cgi-bin/app.py?sesid=" . $id[0]['pmkSessionId'] . "&host=" . SERVER, true, 303);
         exit();
     } else {
         print $databaseWriter->displayQuery($sqlSelect);

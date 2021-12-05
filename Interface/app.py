@@ -129,7 +129,7 @@ print("""
                 </form>
             </div>
             <div>
-                <a href="http://169.254.74.233/templates/profile.php">Finish Session</a>
+                <a href="http://10.245.87.165/templates/profile.php">Finish Session</a>
             </div>
         </div>
      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
