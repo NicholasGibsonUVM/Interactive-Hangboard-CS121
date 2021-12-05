@@ -49,6 +49,7 @@ body{
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
+  flex-grow: 1;
   
 }
 
@@ -142,6 +143,7 @@ p{
   margin-top: 3em;
   border-radius: 1em;
   padding: 1em;
+  padding-left: 0%;
 }
 
 tr:nth-child(even) {background-color: #f2f2f2;}
@@ -174,7 +176,8 @@ button.session:hover{
 .chartBox{
   align-self: center;
   flex-shrink: 0;
-  height: fill;
+  height: fit-content;
+  max-height: -webkit-fill-available;
 }
 
 canvas {
