@@ -52,7 +52,8 @@ foreach ($sessionList as $sessionId) {
     const data = {
         labels: repsX[0],
         datasets: [{
-            label: 'reps',
+            yAxisId: 'y',
+            label: 'Hang Time',
             data: timeY[0],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -77,6 +78,7 @@ foreach ($sessionList as $sessionId) {
     const dataBar = {
         labels: ['Hold 1', 'Hold 2', 'Hold 3'],
         datasets: [{
+            yAxisId: 'y',
             label: 'Hold',
             data: barData[0],
             backgroundColor: [
@@ -101,11 +103,14 @@ foreach ($sessionList as $sessionId) {
     //config block
     const config = {
         type: 'line',
-        data,
+        data: data,
         options: {
             scales: {
-                y: {
+                yAxes: {
                     beginAtZero: true
+                },
+                xAxes: {
+                    type: 'time'
                 }
             },
             title: {
@@ -117,14 +122,15 @@ foreach ($sessionList as $sessionId) {
 
     const configBar = {
         type: 'bar',
-        data,
+        data: dataBar,
         options: {
             scales: {
-                y: {
-                    beginAtZero: true
+                yAxes: {
+                    beginAtZero: true,
                 },
-                x: {
-                    suggestedMax: 3
+                xAxes: {
+                    suggestedMax: 3,
+                    offset: true
                 }
             },
             title: {
