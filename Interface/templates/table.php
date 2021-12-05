@@ -1,6 +1,8 @@
 <section class="tab">
 	<div>
 		<?php
+		$sqlSessions = 'SELECT `pmkSessionId` FROM `tblSession` WHERE `fpkUsername` = "' . $user_data[0]['pmkUsername'] . '" ORDER BY `pmkSessionId`';
+		$sessionList = $databaseWriter->select($sqlSessions);
 		$counter = 1;
 		$idCounter = 0;
 		foreach ($sessionList as $sessionId) {
