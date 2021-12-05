@@ -8,9 +8,9 @@ $user_data = check_login($dbUsername, $dbName);
 <section class='userinfo'>
 <?php
 print '<h3>' . $user_data[0]['fldFirstName'] . ' ' . $user_data[0]['fldLastName'] . '</h3>';
-print '<p>' . $user_data[0]['fldAge'] . ' years old with ' . $user_data[0]['fldExperience'] . ' years of climbing experience</p>';
-print '<p>Top VGrade: V' . $user_data[0]['fldVGrade'] . '</p>';
-print '<p>Top Sport Grade: ' . $user_data[0]['fldSportGrade'] . '</p>';
+print '<p>' . $user_data[0]['fldAge'] . ' years old with ' . $user_data[0]['fldExpeirence'] . ' years of climbing experience</p>';
+print '<br>Top VGrade: V' . $user_data[0]['fldVGrade'];
+print '<br>Top Sport Grade: ' . $user_data[0]['fldSportGrade'] . '</p>';
 ?>
 </section>
 

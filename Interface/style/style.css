@@ -97,6 +97,15 @@ section.flexbox {
   align-items: center;
 }
 
+div.flexbox{
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  width: auto;
+  align-items: center;
+  background-color: white;
+}
+
 .flexbox {
   display: flex;
   justify-content: center space-around;
@@ -105,14 +114,11 @@ section.flexbox {
   border-radius:1em;
 }
 
-.flexbox>div {
-  display: flex;
-  justify-content: left;
-}
 
 div{
   background-color: lightgrey;
   margin: 1em;
+  border-radius: 1em;
 }  
 
 
@@ -182,4 +188,31 @@ button.session:hover{
 
 canvas {
   width: 600px;
+}
+
+p.userinfo{
+  text-align:left;
+  padding-left: 60px;
+  margin: auto;
+  line-height: 1.8;
+}
+h3.userinfo{
+  text-align:left;
+  padding-left: 60px;
+  margin: auto;
+  padding-bottom: 1em;
+}
+
+h2{
+  text-align: center;
+  padding-top: 1em;
+}
+section.userinfo{
+  background-color: #f2f2f2;
+  margin: 5em;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  border-radius: 1em;
+  margin-top: 3em;
+  margin-bottom: 3em;
 }
